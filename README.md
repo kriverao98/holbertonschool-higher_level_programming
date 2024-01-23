@@ -1,0 +1,1 @@
+This folder contains all the projects from Holberton Higher Level Programming. 
