@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 def number_keys(a_dictionary):
     set_keys = len(a_dictionary.keys())
-    print("{}".format())
+    for key in set_keys:
+        print("{}".format())
