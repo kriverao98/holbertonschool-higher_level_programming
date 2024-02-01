@@ -1,0 +1,1 @@
+This folder contains projects 0 through 7 of Python - Hello, World.
