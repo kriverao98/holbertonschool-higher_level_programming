@@ -1,1 +1,0 @@
-This file contains task 0 through 12 of the Python, More Data Structures: Set, Dictionary project.
