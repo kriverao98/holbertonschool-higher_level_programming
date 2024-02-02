@@ -3,6 +3,8 @@
 
 
 class Square:
+    """This module creates a class Square"""
+
     def __init__(self, size=0):
         try:
             if not isinstance(size, int):
