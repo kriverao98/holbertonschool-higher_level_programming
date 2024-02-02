@@ -1,0 +1,15 @@
+import unittest
+from add_integer import add_integer
+
+class TestAddInteger(unittest.TestCase):
+    def test_add_integer(self):
+        self.assertEqual(add_integer(2, 2), 4)
+        self.assertEqual(add_integer(10, -5), 5)
+        self.assertEqual(add_integer(0, 0), 0)
+        self.assertEqual(add_integer(-10, -5), -15)
+        self.assertEqual(add_integer(2.5, 2.5), 5)
+        self.assertEqual(add_integer(2.5, 2), 4)
+        self.assertEqual(add_integer(2, 2.5), 4)
+
+if __name__ == '__main__':
+    unittest.main()
