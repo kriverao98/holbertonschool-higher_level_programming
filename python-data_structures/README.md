@@ -1,1 +1,0 @@
-This folder contains projects 0 through 12 of Python, Data Structures: Lists, Tuples.

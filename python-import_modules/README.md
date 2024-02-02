@@ -1,1 +1,0 @@
-This file contains task 0 through 5 of the project Python, import & modules.

@@ -1,1 +1,0 @@
-This folder contains files 0 through 12 of Python, if/else, loops, functions
