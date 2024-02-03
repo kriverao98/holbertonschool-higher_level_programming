@@ -3,6 +3,7 @@
 
 
 def text_indentation(text):
+    """function prints 2 newline after char .,?,:"""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
