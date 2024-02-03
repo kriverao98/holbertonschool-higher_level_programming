@@ -3,16 +3,13 @@
 
 
 def text_indentation(text):
-    """function prints text with 2 newlines"""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    for delimiter in "?:.":
-        text = (delimiter + "\n\n").join(
-            [index.strip(" ") for index in text.split(delimiter)])
+    new_text = ""
+    for char in text:
+        new_text += char
+        if char in ['.', '?', ':']:
+            new_text += "\n\n"
 
-    print(text)
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testfile("tests/5-text_indentation.txt")
+    print(new_text.strip())
