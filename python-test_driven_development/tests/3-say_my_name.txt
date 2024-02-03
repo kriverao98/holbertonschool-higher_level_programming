@@ -1,26 +1,27 @@
-import unittest
-from io import StringIO
-import sys
-from 3-say_my_name import say_my_name
+>>> say_my_name = __import__('3-say_my_name').say_my_name
 
-class TestSayMyName(unittest.TestCase):
-    def test_say_my_name(self):
-        # Redirect stdout
-        capturedOutput = StringIO()
-        sys.stdout = capturedOutput
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
-        # Test with strings
-        say_my_name("John", "Doe")
-        self.assertEqual(capturedOutput.getvalue(), "My name is John Doe\n")
+>>> say_my_name("A", "B", "C")
+Traceback (most recent call last):
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
 
-        # Reset stdout
-        sys.stdout = sys.__stdout__
+>>> say_my_name(42)
+Traceback (most recent call last):
+TypeError: first_name must be a string
 
-        # Test with non-string inputs
-        with self.assertRaises(TypeError):
-            say_my_name(123, "Doe")
-        with self.assertRaises(TypeError):
-            say_my_name("John", 123)
+>>> say_my_name(42, "Hamilton")
+Traceback (most recent call last):
+TypeError: first_name must be a string
 
-if __name__ == '__main__':
-    unittest.main()
+>>> say_my_name("Alex", 42)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name("Alex", "Hamilton")
+My name is Alex Hamilton
+
+>>> say_my_name("Alex")
+My name is Alex 
