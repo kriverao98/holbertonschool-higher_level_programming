@@ -1,85 +1,30 @@
-# tests/6-max_integer_test.py
+#!/usr/bin/python3
+""" Here is a short script to 
+test max_integer([..])"""
 
 import unittest
-from my_module import max_integer
+max_integer = __import__('6-max_integer').max_integer
 
-class MaxIntegerTestCase(unittest.TestCase):
-    def test_empty_list(self):
-        result = max_integer([])
-        self.assertIsNone(result)
+# A testcase is created by subclassing unittest.TestCase
+class TestMaxInteger(unittest.TestCase):
 
-    def test_single_element_list(self):
-        result = max_integer([5])
-        self.assertEqual(result, 5)
+    def test_upper(self):
+        self.assertEqual(max_integer([6, 7, 8, 9]), 9)
 
-    def test_positive_numbers(self):
-        result = max_integer([1, 2, 3, 4, 5])
-        self.assertEqual(result, 5)
+    def test_none(self):
+        self.assertEqual(max_integer([]), None)
 
-    def test_negative_numbers(self):
-        result = max_integer([-1, -2, -3, -4, -5])
-        self.assertEqual(result, -1)
+    def test_one(self):
+        self.assertEqual(max_integer([2]), 2)
 
-    def test_mixed_numbers(self):
-        result = max_integer([-1, 2, -3, 4, -5])
-        self.assertEqual(result, 4)
+    def test_one_neg(self):
+        self.assertEqual(max_integer([-10]), -10)
 
-    def test_duplicate_numbers(self):
-        result = max_integer([1, 2, 3, 3, 2, 1])
-        self.assertEqual(result, 3)
+    def test_neg(self):
+        self.assertEqual(max_integer([1, -2, -3, -4]), 1)
 
-if __name__ == '__main__':
-    unittest.main()# tests/6-max_integer_test.py
-
-import unittest
-from my_module import max_integer
-
-class MaxIntegerTestCase(unittest.TestCase):
-    def test_empty_list(self):
-        result = max_integer([])
-        self.assertIsNone(result)
-
-    def test_single_element_list(self):
-        result = max_integer([5])
-        self.assertEqual(result, 5)
-
-    def test_positive_numbers(self):
-        result = max_integer([1, 2, 3, 4, 5])
-        self.assertEqual(result, 5)
-
-    def test_negative_numbers(self):
-        result = max_integer([-1, -2, -3, -4, -5])
-        self.assertEqual(result, -1)
-
-    def test_mixed_numbers(self):
-        result = max_integer([-1, 2, -3, 4, -5])
-        self.assertEqual(result, 4)
-
-    def test_duplicate_numbers(self):
-        result = max_integer([1, 2, 3, 3, 2, 1])
-        self.assertEqual(result, 3)
-
-    # BEGIN: Additional test cases
-    def test_empty_string(self):
-        result = max_integer("")
-        self.assertIsNone(result)
-
-    def test_max_at_beginning(self):
-        result = max_integer([10, 5, 3, 2, 1])
-        self.assertEqual(result, 10)
-
-    def test_max_at_end(self):
-        result = max_integer([1, 2, 3, 5, 10])
-        self.assertEqual(result, 10)
-
-    def test_max_in_middle(self):
-        result = max_integer([1, 2, 10, 5, 3])
-        self.assertEqual(result, 10)
-
-    def test_all_same_numbers(self):
-        result = max_integer([5, 5, 5, 5, 5])
-        self.assertEqual(result, 5)
-    # END: Additional test cases
+    def test_middle(self):
+        self.assertEqual(max_integer([1, 3, 8, 2, 6]), 8)
 
 if __name__ == '__main__':
     unittest.main()
