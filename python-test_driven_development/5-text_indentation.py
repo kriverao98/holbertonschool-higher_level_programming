@@ -3,6 +3,7 @@
 
 
 def text_indentation(text):
+    """Function prints text with 2 newlines"""
 	if not isinstance(text, str):
 		raise TypeError("text must be a string")
 
