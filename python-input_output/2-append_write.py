@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Appends text to a file and returns the number of characters written."""
 
 
 def append_write(filename="", text=""):

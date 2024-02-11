@@ -1,5 +1,6 @@
-import json
 #!/usr/bin/python3
+"""Load a JSON file and return the deserialized object."""
+import json
 
 
 def load_from_json_file(filename):
