@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This is the base class for geometry operations."""
 
 
 class Square(__import__('9-rectangle').Rectangle):

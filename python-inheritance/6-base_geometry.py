@@ -1,4 +1,5 @@
 #!/usr/bin/python
+"""This is the base class for geometry operations."""
 
 
 class BaseGeometry:
