@@ -1,0 +1,1 @@
+This folder contains task 0 through 19 of Python, Almost a circle.
