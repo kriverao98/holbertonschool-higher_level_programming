@@ -57,7 +57,6 @@ class Rectangle(Base):
         self.__y = value
             
     def check_type(self, value, name, eq=True):
-            """Check if the value is of the correct type and raise an error if not."""
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
         if eq and value < 0:
@@ -68,3 +67,15 @@ class Rectangle(Base):
     def area(self):
         """Returns area of rectangle"""
         return self.width * self.height
+    
+    def display(self):
+            """Display the rectangle by printing it to the console."""
+            rec = '\n' * self.y + \
+                (' ' * self.x + '#' * self.width + '\n') * self.height
+            print(rec, end='')
+        
+    def __str__(self):
+        """Returns info"""
+        return '[{}] ({}) {}/{} - {}/{}'.\
+            format(type(self).__name__, self.id, self.x, self.y, self.width,
+                   self.height)
