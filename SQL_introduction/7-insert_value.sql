@@ -1,2 +1,2 @@
 -- inserts new row into table
-SELECT COUNT(*) FROM first_table WHERE id=89;
+INSERT INTO `first_table` (`id`, `name`) VALUES (89, 'Best School');
