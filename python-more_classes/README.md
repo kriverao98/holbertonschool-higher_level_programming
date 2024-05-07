@@ -1,1 +1,0 @@
-This folder contains task 0 through 9 of Python, More Classes.

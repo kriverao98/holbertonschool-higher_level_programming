@@ -1,1 +1,0 @@
-This folder contains task 0 through 28 of Python, Everything is object.
