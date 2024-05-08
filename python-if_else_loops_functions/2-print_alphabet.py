@@ -3,4 +3,4 @@
 Prints the alphabet in lowercase using a for loop.
 """
 for i in range(97, 123):
-    print("{}" .format(chr(i)), end='')
+    print(f"{chr(i)}", end='')
