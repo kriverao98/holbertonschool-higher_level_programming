@@ -7,5 +7,5 @@ def multiple_returns(sentence):
     the sentence and its first character.
     """
     if sentence == 0:
-        return (0, None)
+        return (None)
     return (len(sentence), sentence[0])
