@@ -2,6 +2,9 @@
 
 
 def add_tuple(tuple_a=(), tuple_b=()):
+    """
+    Adds two tuples element-wise and returns the result.
+    """
     if len(tuple_a) == 0:
         tuple_a = (0, 0)
     elif len(tuple_a) == 1:
