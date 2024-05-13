@@ -1,0 +1,1 @@
+This file contains the documentation for the Python data structures module in the Holberton School higher-level programming curriculum.
