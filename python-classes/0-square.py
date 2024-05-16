@@ -2,4 +2,5 @@
 
 
 class Square:
+    """This is a Square class."""
     pass
