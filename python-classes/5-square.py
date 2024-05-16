@@ -1,7 +1,21 @@
 #!/usr/bin/python3
+"""This defines class Square"""
 
 
 class Square:
+    """
+    This class represents a square.
+
+    Attributes:
+        __size (int): The size of the square.
+
+    Methods:
+        size: Getter method for __size attribute.
+        size.setter: Setter method for __size attribute.
+        area: Calculates the area of the square.
+        my_print: Prints a visual representation of the square.
+    """
+
     def __init__(self, size=0):
         self.__size = size
 
