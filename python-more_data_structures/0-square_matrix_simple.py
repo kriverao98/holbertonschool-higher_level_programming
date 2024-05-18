@@ -1,7 +1,17 @@
 #!/usr/bin/python3
+"""Computes the square value of all ints in a matrix"""
 
 
 def square_matrix_simple(matrix=[]):
+    """
+    Computes the square of each element in a matrix.
+
+    Args:
+        matrix (list): The input matrix.
+
+    Returns:
+        list: A new matrix with the square of each element.
+    """
     new_matrix = []
     
     for row in matrix:

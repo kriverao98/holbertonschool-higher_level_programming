@@ -1,0 +1,1 @@
+This directory contains files o through 12 of Python, more data structure tasks.
