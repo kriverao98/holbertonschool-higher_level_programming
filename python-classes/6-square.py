@@ -12,6 +12,9 @@ class Square:
     """
 
     def __init__(self, size=0, position=(0, 0)):
+        """
+        Initializes a new instance of the Square class.
+        """
         self.size = size
         self.position = position
 
