@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-"""This class represents a base geometry"""
+"""Check given value"""
 
 
 class BaseGeometry:
     def area(self):
         """Raises exception"""
         raise Exception("area() is not implemented")
-
 
     def integer_validator(self, name, value):
         """Checks given value"""
