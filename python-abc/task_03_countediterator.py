@@ -1,18 +1,19 @@
 #!/usr/bin/python3
-"""Iterator, counts the num of items fetched"""
+"""Program that counts the num of items"""
 
 
 class CountedIterator:
     """
-    Represents an iterator that counts the number of items fetched.
+    A class that represents a counted iterator.
 
     Attributes:
         iterator (iterable): The iterable object to iterate over.
-        counter (int): The count of items fetched.
+        counter (int): The count of items iterated over.
 
     Methods:
-        __next__(): Retrieves the next item from the iterator.
-        get_count(): Returns the count of items fetched.
+        __next__(): Returns the next item in the iterator.
+        get_count(): Returns the count of items iterated over.
+        __iter__(): Returns the iterator object itself.
     """
 
     def __init__(self, iterable):
@@ -27,35 +28,44 @@ class CountedIterator:
 
     def __next__(self):
         """
-        Retrieves the next item from the iterator.
+        Returns the next item in the iterator.
 
         Returns:
-            The next item from the iterator.
+            The next item in the iterator.
 
         Raises:
-            StopIteration: If there are no more items to iterate.
+            StopIteration: If there are no more items in the iterator.
         """
         try:
             item = next(self.iterator)
             self.counter += 1
             return item
         except StopIteration:
-            raise StopIteration("No more items to iterate")
+            raise StopIteration
 
     def get_count(self):
         """
-        Returns the count of items fetched.
+        Returns the count of items iterated over.
 
         Returns:
-            The count of items fetched.
+            The count of items iterated over.
         """
         return self.counter
 
-# Testing
-my_list = [1, 2, 3, 4, 5]
-my_iterator = CountedIterator(my_list)
+    def __iter__(self):
+        """
+        Returns the iterator object itself.
 
-for item in my_iterator:
-    print(item)
+        Returns:
+            The iterator object itself.
+        """
+        return self
 
-print("Total items fetched:", my_iterator.get_count())
+if __name__ == "__main__":
+    sample_list = [1, 2, 3, 4, 5]
+    counted_iter = CountedIterator(sample_list)
+
+    for item in counted_iter:
+        print(item)
+
+    print("Total items iterated over:", counted_iter.get_count())
