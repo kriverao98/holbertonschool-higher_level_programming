@@ -19,7 +19,8 @@ class Student:
         """Converts the student object to a JSON representation.
 
         Args:
-            attrs (list, optional): A list of attributes to include in the JSON representation.
+            attrs (list, optional): A list of attributes to include
+            in the JSON representation.
                 If None, all attributes are included.
 
         Returns:
