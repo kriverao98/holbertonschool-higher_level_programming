@@ -25,7 +25,7 @@ class CustomObject:
         self.name = name
         self.age = age
         self.is_student = is_student
-    
+
     def display(self):
         """
         Displays the attributes of the object.
@@ -33,13 +33,14 @@ class CustomObject:
         print(f"Name: {self.name}")
         print(f"Age: {self.age}")
         print(f"Is Student: {self.is_student}")
-    
+
     def serialize(self, filename):
         """
         Serializes the object and saves it to a file.
 
         Args:
-            filename (str): The name of the file to save the serialized object to.
+            filename (str): The name of the file to save
+            the serialized object to.
 
         Returns:
             None: If serialization is successful.
@@ -57,10 +58,12 @@ class CustomObject:
         Deserializes an object from a file.
 
         Args:
-            filename (str): The name of the file to deserialize the object from.
+            filename (str): The name of the file to
+            deserialize the object from.
 
         Returns:
-            CustomObject: The deserialized object if successful, None otherwise.
+            CustomObject: The deserialized object if
+            successful, None otherwise.
         """
         try:
             with open(filename, 'rb') as file:
