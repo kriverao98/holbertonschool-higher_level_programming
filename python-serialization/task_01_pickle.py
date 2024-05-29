@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Serialization and Deserialization with Pickle"""
+"""Class that serializes and deserializes using pickle"""
 import pickle
 
 
@@ -10,7 +10,7 @@ class CustomObject:
     Attributes:
         name (str): The name of the object.
         age (int): The age of the object.
-        is_student (bool): Whether the object is a student or not.
+        is_student (bool): Indicates whether the object is a student or not.
     """
 
     def __init__(self, name, age, is_student):
@@ -20,7 +20,8 @@ class CustomObject:
         Args:
             name (str): The name of the object.
             age (int): The age of the object.
-            is_student (bool): Whether the object is a student or not.
+            is_student (bool): Indicates whether the
+            object is a student or not.
         """
         self.name = name
         self.age = age
@@ -28,7 +29,7 @@ class CustomObject:
 
     def display(self):
         """
-        Displays the attributes of the object.
+        Displays the attributes of the CustomObject instance.
         """
         print(f"Name: {self.name}")
         print(f"Age: {self.age}")
@@ -36,14 +37,14 @@ class CustomObject:
 
     def serialize(self, filename):
         """
-        Serializes the object and saves it to a file.
+        Serializes the CustomObject instance and saves it to a file.
 
         Args:
-            filename (str): The name of the file to save
-            the serialized object to.
+            filename (str): The name of the file
+            to save the serialized object to.
 
         Returns:
-            None: If serialization is successful.
+            None
         """
         try:
             with open(filename, 'wb') as file:
@@ -55,15 +56,15 @@ class CustomObject:
     @classmethod
     def deserialize(cls, filename):
         """
-        Deserializes an object from a file.
+        Deserializes a CustomObject instance from a file.
 
         Args:
             filename (str): The name of the file to
             deserialize the object from.
 
         Returns:
-            CustomObject: The deserialized object if
-            successful, None otherwise.
+            CustomObject or None: The deserialized CustomObject
+            instance, or None if an error occurred.
         """
         try:
             with open(filename, 'rb') as file:
