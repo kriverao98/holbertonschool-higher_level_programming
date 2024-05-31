@@ -1,0 +1,1 @@
+This directory contains projects 0 through 6 of Python - Exception.
