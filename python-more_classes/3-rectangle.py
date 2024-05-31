@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """ Rectangle class"""
+    """ Rectangle class """
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -39,3 +39,12 @@ class Rectangle:
             return 0
         else:
             return 2 * (self.width + self.height)
+
+    def __str__(self):
+        if self.width == 0 or self.height == 0:
+            return ''
+        else:
+            rectangle_str = ''
+            for _ in range(self.height):
+                rectangle_str += '#' * self.width + '\n'
+            return rectangle_str.rstrip('\n')
