@@ -1,0 +1,1 @@
+This directory contains projects 0 through 9 of Python-More Classes.
