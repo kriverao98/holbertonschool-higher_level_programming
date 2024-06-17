@@ -1,0 +1,1 @@
+This directory contains projects 0 through 16 of the intro to SQL task.
