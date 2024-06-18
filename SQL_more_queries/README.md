@@ -1,0 +1,1 @@
+This directory contains files 0 through 16 of the SQL_more_queries projects.
