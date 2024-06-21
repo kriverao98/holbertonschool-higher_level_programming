@@ -9,21 +9,16 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
-    """Get command line arguments"""
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
-
     """Connect to MySQL server"""
-    db = MySQLdb.connect(host="localhost", port=3306, user=username,
-                         passwd=password, db=database)
+    db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
+                         passwd=argv[2], db=argv[3])
 
     """Create a cursor object"""
     cursor = db.cursor()
 
     """Execute the query"""
     cursor.execute("SELECT * FROM states WHERE name\
-                   LIKE 'N%' ORDER BY id ASC")
+                   LIKE BINARY 'N%' ORDER BY state.id ASC")
 
     """Fetch all the rows"""
     rows = cursor.fetchall()
