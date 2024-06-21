@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
     # Create a cursor object to interact with the database
     cur = db.cursor()
-    cur.execute("SELECT * FROM states")
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
 
     # Fetch all the rows from the query result
     rows = cur.fetchall()
