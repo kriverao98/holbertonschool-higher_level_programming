@@ -18,17 +18,17 @@ if __name__ == "__main__":
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'
         .format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
-    
+
     # Create all the tables defined in the Base class
     Base.metadata.create_all(engine)
-    
+
     # Create a session to interact with the database
     Session = sessionmaker(bind=engine)
     session = Session()
-    
+
     # Retrieve all the states from the 'states' table and print them
     for state in session.query(State).order_by(State.id).all():
         print("{}: {}".format(state.id, state.name))
-    
+
     # Close the session
     session.close()
