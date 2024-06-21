@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-This script connects to a MySQL database and retrieves rows from the 'states' table based on a provided name.
-The script takes command line arguments for the MySQL username, password, database name, and name to search for.
+This script connects to a MySQL database and
+retrieves rows from the 'states' table based on a provided name.
+The script takes command line arguments for
+the MySQL username, password, database name, and name to search for.
 """
 import MySQLdb
 from sys import argv
