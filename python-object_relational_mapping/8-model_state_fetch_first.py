@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This script prints the first State obj from database
+"""
 from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
