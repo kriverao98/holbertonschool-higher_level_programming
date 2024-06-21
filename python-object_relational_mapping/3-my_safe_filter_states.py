@@ -12,7 +12,9 @@ if __name__ == '__main__':
 
     # Create a cursor object to interact with the database
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE BINARY %(name)s ORDER BY states.id ASC", {'name':argv[4]})
+    cur.execute("SELECT * FROM states\
+            WHERE name LIKE BINARY %(name)s\
+            ORDER BY states.id ASC", {'name': argv[4]})
     # Fetch all the rows returned by the query
     rows = cur.fetchall()
     # Print each row and closes process
