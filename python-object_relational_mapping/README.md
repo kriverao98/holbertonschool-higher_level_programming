@@ -1,0 +1,1 @@
+This directory contains task 0 through 14 of Python - Object - Relational Mapping project.
