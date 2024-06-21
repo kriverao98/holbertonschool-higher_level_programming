@@ -1,20 +1,8 @@
+#!/usr/bin/python3
 """
 This script connects to a MySQL database and retrieves all states whose name contains the letter 'a'.
 It uses SQLAlchemy to establish the connection and perform the query.
 """
-
-from sys import argv
-from model_state import Base, State
-from sqlalchemy import (create_engine)
-from sqlalchemy.orm import sessionmaker
-
-#!/usr/bin/python3
-"""
-This script lists all State objects
-that contain the letter `a`
-from the database `hbtn_0e_6_usa`.
-"""
-
 from sys import argv
 from model_state import Base, State
 from sqlalchemy import create_engine
