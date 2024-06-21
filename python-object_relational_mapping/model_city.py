@@ -5,6 +5,7 @@ Class used by database
 from model_state import Base, State
 from sqlalchemy import Column, Integer, String, ForeignKey
 
+
 class City(Base):
     """
     Represents a city in the database.
