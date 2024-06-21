@@ -7,8 +7,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
-
-def fetch_first_state():
+if __name__ == '__main__':
     """
     Fetches the first state from the database and prints its id and name.
     If no state is found, it prints "Nothing".
@@ -22,5 +21,5 @@ def fetch_first_state():
     if state is None:
         print("Nothing")
     else:
-        print("{}: {}".format(state.id, state.name))
+        print("{}: {1}".format(state.id, state.name))
     session.close()
