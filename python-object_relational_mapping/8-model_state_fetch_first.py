@@ -3,23 +3,25 @@
 This script prints the first State obj from database
 """
 from sys import argv
+from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import Base, State
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     """
-    Fetches the first state from the database and prints its id and name.
-    If no state is found, it prints "Nothing".
+    Access to the database and get a state
+    from the database.
     """
-    engine = create_engine(
-        'mysql+mysqldb://{}:{}@localhost:3306/{}'
-        .format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
+
+    db_uri = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
+        argv[1], argv[2], argv[3])
+    engine = create_engine(db_uri)
     Session = sessionmaker(bind=engine)
+
     session = Session()
-    state = session.query(State).order_by(State.id).first()
-    if state is None:
-        print("Nothing")
+    instance = session.query(State).order_by(State.id).first()
+
+    if instance is None:
+        print('Nothing')
     else:
-        print("{}: {1}".format(state.id, state.name))
-    session.close()
+        print('{0}: {1}'.format(instance.id, instance.name))
