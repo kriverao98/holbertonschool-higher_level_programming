@@ -1,0 +1,8 @@
+Hello {name},
+
+You are invited to the {event_title} on {event_date} at San Francisco.
+
+We look forward to your presence.
+
+Best regards,
+Event Team

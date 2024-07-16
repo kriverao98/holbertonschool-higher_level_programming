@@ -1,0 +1,1 @@
+This directory contains task 0-4 of Python - Server-Side Rendering.
