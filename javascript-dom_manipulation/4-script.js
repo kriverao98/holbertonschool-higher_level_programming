@@ -6,5 +6,5 @@ if (add_item && my_list) {
 		newItem.textContent = "Item";
 		my_list.appendChild(newItem);
 		newItem.classList.add("my_list");
-	});
+	});  
 };
