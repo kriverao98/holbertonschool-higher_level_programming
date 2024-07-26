@@ -1,0 +1,1 @@
+This directory contains task 0 through 8 of the JavaScript, Document Object Model (DOM) projects.
